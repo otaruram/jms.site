@@ -85,7 +85,7 @@ const ProductSection = () => {
               </p>
             </div>
             <Button variant="heroOutline" className="mt-4 md:mt-0" asChild>
-              <a href="https://wa.me/6281223718485" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.link/yt37r7" target="_blank" rel="noopener noreferrer">
                 Minta Katalog Lengkap
               </a>
             </Button>
@@ -114,7 +114,7 @@ const ProductSection = () => {
               </p>
             </div>
             <Button variant="heroOutline" className="mt-4 md:mt-0" asChild>
-              <a href="https://wa.me/6281223718485" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.link/njqpr9" target="_blank" rel="noopener noreferrer">
                 Konsultasi Gratis
               </a>
             </Button>

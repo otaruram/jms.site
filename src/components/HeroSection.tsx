@@ -1,7 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Shield, Award, Leaf } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const fullText = "Solusi Kebutuhan Medis & Interior Rumah Sakit Terpercaya";
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(fullText.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, 50);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
+
   return (
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 hero-gradient overflow-hidden">
       {/* Background decorations */}
@@ -16,11 +31,10 @@ const HeroSection = () => {
             <span className="text-sm font-medium text-primary">TKDN 94,37% Tersertifikasi</span>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Solusi Kebutuhan{" "}
-            <span className="gradient-text">Medis & Interior</span>{" "}
-            Rumah Sakit Terpercaya
+          {/* Headline with typing animation */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 min-h-[1.2em] md:min-h-[2.4em]">
+            {displayedText}
+            <span className="animate-pulse text-primary">|</span>
           </h1>
 
           {/* Subheadline */}
@@ -38,7 +52,7 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button variant="whatsapp" size="xl" asChild>
-              <a href="https://wa.me/6281223718485" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.link/2j2jxt" target="_blank" rel="noopener noreferrer">
                 <Phone className="w-5 h-5" />
                 Hubungi WhatsApp
               </a>
