@@ -12,107 +12,107 @@
   :root {
     /* Core Colors - Clean Medical Palette */
     --background: 0 0% 100%;
-    --foreground: 152 25% 12%;
+    --foreground: 160 30% 8%;
 
-    /* Emerald Green - Primary Brand Color */
-    --primary: 152 55% 35%;
+    /* Deep Emerald Green - Professional Medical Brand */
+    --primary: 160 65% 22%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 152 45% 92%;
-    --primary-glow: 152 60% 45%;
+    --primary-light: 160 35% 94%;
+    --primary-glow: 160 55% 32%;
 
     /* Cards & Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 152 25% 12%;
-    --card-hover: 152 20% 98%;
+    --card-foreground: 160 30% 8%;
+    --card-hover: 160 15% 98%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 152 25% 12%;
+    --popover-foreground: 160 30% 8%;
 
-    /* Secondary - Soft Gray Green */
-    --secondary: 150 15% 96%;
-    --secondary-foreground: 152 25% 20%;
+    /* Secondary - Cool Gray */
+    --secondary: 160 8% 96%;
+    --secondary-foreground: 160 25% 15%;
 
     /* Muted - Subtle backgrounds */
-    --muted: 150 12% 95%;
-    --muted-foreground: 152 10% 45%;
+    --muted: 160 6% 95%;
+    --muted-foreground: 160 8% 42%;
 
-    /* Accent - Light Emerald */
-    --accent: 152 40% 94%;
-    --accent-foreground: 152 55% 25%;
+    /* Accent - Soft Emerald */
+    --accent: 160 30% 95%;
+    --accent-foreground: 160 65% 18%;
 
     /* Functional */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
-    --border: 152 15% 90%;
-    --input: 152 15% 90%;
-    --ring: 152 55% 35%;
+    --border: 160 10% 88%;
+    --input: 160 10% 88%;
+    --ring: 160 65% 22%;
 
-    --radius: 0.75rem;
+    --radius: 0.625rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(152 55% 35%) 0%, hsl(152 60% 45%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(152 40% 96%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(152 20% 98%) 100%);
+    /* Gradients - More sophisticated */
+    --gradient-primary: linear-gradient(135deg, hsl(160 65% 22%) 0%, hsl(160 55% 32%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(160 20% 97%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(160 15% 98%) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(152 20% 20% / 0.05);
-    --shadow-card: 0 4px 20px -4px hsl(152 20% 20% / 0.08);
-    --shadow-card-hover: 0 12px 32px -8px hsl(152 30% 20% / 0.15);
-    --shadow-glow: 0 0 40px -10px hsl(152 55% 45% / 0.3);
+    /* Shadows - Refined */
+    --shadow-sm: 0 1px 2px 0 hsl(160 20% 10% / 0.04);
+    --shadow-card: 0 2px 16px -4px hsl(160 20% 10% / 0.06), 0 1px 3px -1px hsl(160 20% 10% / 0.04);
+    --shadow-card-hover: 0 8px 28px -6px hsl(160 30% 10% / 0.12);
+    --shadow-glow: 0 0 40px -10px hsl(160 55% 30% / 0.25);
 
     /* Sidebar (if needed) */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 152 25% 20%;
-    --sidebar-primary: 152 55% 35%;
+    --sidebar-foreground: 160 30% 12%;
+    --sidebar-primary: 160 65% 22%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 152 40% 94%;
-    --sidebar-accent-foreground: 152 55% 25%;
-    --sidebar-border: 152 15% 90%;
-    --sidebar-ring: 152 55% 35%;
+    --sidebar-accent: 160 30% 95%;
+    --sidebar-accent-foreground: 160 65% 18%;
+    --sidebar-border: 160 10% 88%;
+    --sidebar-ring: 160 65% 22%;
   }
 
   .dark {
-    --background: 152 25% 8%;
-    --foreground: 150 15% 95%;
+    --background: 160 25% 6%;
+    --foreground: 160 10% 95%;
 
-    --primary: 152 50% 45%;
-    --primary-foreground: 152 25% 8%;
-    --primary-light: 152 30% 15%;
-    --primary-glow: 152 55% 55%;
+    --primary: 160 50% 38%;
+    --primary-foreground: 160 25% 6%;
+    --primary-light: 160 25% 12%;
+    --primary-glow: 160 45% 48%;
 
-    --card: 152 20% 12%;
-    --card-foreground: 150 15% 95%;
-    --card-hover: 152 20% 15%;
+    --card: 160 20% 10%;
+    --card-foreground: 160 10% 95%;
+    --card-hover: 160 18% 13%;
 
-    --popover: 152 20% 12%;
-    --popover-foreground: 150 15% 95%;
+    --popover: 160 20% 10%;
+    --popover-foreground: 160 10% 95%;
 
-    --secondary: 152 15% 18%;
-    --secondary-foreground: 150 15% 90%;
+    --secondary: 160 12% 15%;
+    --secondary-foreground: 160 10% 90%;
 
-    --muted: 152 15% 18%;
-    --muted-foreground: 150 10% 60%;
+    --muted: 160 12% 15%;
+    --muted-foreground: 160 8% 55%;
 
-    --accent: 152 25% 20%;
-    --accent-foreground: 152 45% 70%;
+    --accent: 160 20% 16%;
+    --accent-foreground: 160 40% 65%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 152 15% 20%;
-    --input: 152 15% 20%;
-    --ring: 152 50% 45%;
+    --border: 160 12% 18%;
+    --input: 160 12% 18%;
+    --ring: 160 50% 38%;
 
-    --sidebar-background: 152 20% 10%;
-    --sidebar-foreground: 150 15% 90%;
-    --sidebar-primary: 152 50% 45%;
-    --sidebar-primary-foreground: 152 25% 8%;
-    --sidebar-accent: 152 25% 18%;
-    --sidebar-accent-foreground: 152 45% 70%;
-    --sidebar-border: 152 15% 18%;
-    --sidebar-ring: 152 50% 45%;
+    --sidebar-background: 160 20% 8%;
+    --sidebar-foreground: 160 10% 90%;
+    --sidebar-primary: 160 50% 38%;
+    --sidebar-primary-foreground: 160 25% 6%;
+    --sidebar-accent: 160 20% 14%;
+    --sidebar-accent-foreground: 160 40% 65%;
+    --sidebar-border: 160 12% 15%;
+    --sidebar-ring: 160 50% 38%;
   }
 }
 
