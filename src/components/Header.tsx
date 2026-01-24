@@ -34,7 +34,7 @@ const Header = () => {
 
         {/* CTA */}
         <Button variant="hero" size="sm" asChild>
-          <a href="https://wa.me/6281223718485" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.link/2j2jxt" target="_blank" rel="noopener noreferrer">
             <Phone className="w-4 h-4" />
             <span className="hidden sm:inline">Hubungi Kami</span>
           </a>
