@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# PT Jayata Medika Sentosa - Official Website
 
-## Project info
+![PT Jayata Medika Sentosa](fe/public/jms.png)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Modern, high-performance corporate website for **PT Jayata Medika Sentosa**, a trusted supplier of hospital linen and professional window blinds in Indonesia. This project features a clean, clinical aesthetic ("Clean & Clinical High-End"), universal language support (ID/EN), and a responsive design tailored for healthcare professionals.
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+-   **Modern UI/UX**: Designed with a "Clean & Clinical" aesthetic using **Tailwind CSS**.
+-   **Universal Language**: Complete English & Indonesian translation support via `LanguageContext`.
+-   **Dark/Light Mode**: Seamless theme switching with persistent user preference.
+-   **Responsive Design**: Fully optimized for mobile, tablet, and desktop devices.
+-   **Performance**: Built with **Vite** for lightning-fast scanning and reloading.
+-   **Key Sections**:
+    -   **Hero**: Immersive background with auto-typing headline.
+    -   **Products**: Interactive catalog for Hospital Linen & Window Blinds.
+    -   **Comparison**: Minimalist table comparing product specifications.
+    -   **Problem/Solution**: Addressing common healthcare facility challenges.
+-   **UX Enhancements**:
+    -   Professional pulsed loading screen.
+    -   Smooth page transitions & auto-scroll to top.
+    -   Interactive card hover effects.
 
-**Use Lovable**
+## 🛠 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+-   **Framework**: [React](https://reactjs.org/) (Vite)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Routing**: [React Router](https://reactrouter.com/)
+-   **Animation**: CSS3 Transitions & Keyframes
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📂 Project Structure
 
-**Use your preferred IDE**
+ The project source code is located in the `fe/` directory.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+fe/
+├── public/          # Static assets (images, icons)
+├── src/
+│   ├── components/  # Reusable UI components (Header, Footer, Sections)
+│   ├── contexts/    # Global state (LanguageCode)
+│   ├── pages/       # Main page views
+│   ├── lib/         # Utilities (Tailwind merge, etc.)
+│   └── App.tsx      # Main application entry
+└── index.html       # Entry HTML file
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+-   Node.js (v16 or higher)
+-   npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/otaruram/jms.site.git
+    cd jms.site
+    ```
 
-This project is built with:
+2.  Navigate to the frontend directory:
+    ```bash
+    cd fe
+    ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-## How can I deploy this project?
+4.  Run the development server:
+    ```bash
+    npm run dev
+    ```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+5.  Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
-## Can I connect a custom domain to my Lovable project?
+## 🚢 Deployment (Vercel)
 
-Yes, you can!
+This project is tailored for deployment on **Vercel**.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1.  Push this repository to GitHub.
+2.  Log in to [Vercel](https://vercel.com/) and "Add New Project".
+3.  Import the **jms.site** repository.
+4.  **Important**: In the Vercel project settings, set the **Root Directory** to `fe`.
+    -   Vercel will automatically detect Vite and configure the build settings (`npm run build`).
+5.  Click **Deploy**.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 License
+
+© 2024 PT Jayata Medika Sentosa. All rights reserved.

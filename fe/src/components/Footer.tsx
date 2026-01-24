@@ -1,7 +1,10 @@
 import { MapPin, Mail, Phone, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t, language, setLanguage } = useLanguage();
+
   return (
     <footer id="kontak" className="bg-foreground text-primary-foreground py-16 md:py-20">
       <div className="container">
@@ -9,17 +12,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">JM</span>
-              </div>
+              <img src="/jms.png" alt="PT Jayata Medika Sentosa" className="h-12 w-auto" />
               <div>
                 <h3 className="font-semibold text-primary-foreground leading-tight">PT Jayata Medika</h3>
                 <p className="text-sm text-primary-foreground/60">Sentosa</p>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed max-w-md mb-6">
-              Supplier terpercaya untuk kebutuhan linen rumah sakit dan window blinds profesional. 
-              Melayani fasilitas kesehatan di seluruh Indonesia dengan produk berkualitas tinggi dan bersertifikasi.
+              {t('footer.desc')}
             </p>
             <Button variant="hero" size="lg" asChild>
               <a href="https://wa.me/6281223718485" target="_blank" rel="noopener noreferrer">
@@ -98,6 +98,21 @@ const Footer = () => {
             <p className="text-sm text-primary-foreground/50">
               TKDN 94,37% Tersertifikasi
             </p>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setLanguage('id')}
+                className={`text-sm font-medium transition-colors ${language === 'id' ? 'text-primary' : 'text-primary-foreground/50 hover:text-primary-foreground/80'}`}
+              >
+                ID
+              </button>
+              <span className="text-primary-foreground/20">|</span>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`text-sm font-medium transition-colors ${language === 'en' ? 'text-primary' : 'text-primary-foreground/50 hover:text-primary-foreground/80'}`}
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
       </div>
