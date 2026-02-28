@@ -52,20 +52,8 @@ const HeroSection = () => {
             {t('hero.subheadline')}
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons Removed as per request */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="xl" asChild>
-              <a href="#produk">
-                {t('hero.cta.catalog')}
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </Button>
-            <Button variant="whatsapp" size="xl" asChild>
-              <a href="https://wa.link/2j2jxt" target="_blank" rel="noopener noreferrer">
-                <Phone className="w-5 h-5" />
-                {t('hero.cta.whatsapp')}
-              </a>
-            </Button>
           </div>
 
           {/* Trust indicators */}

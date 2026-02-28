@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import PageTransition from "@/components/PageTransition";
 import LoadingScreen from "@/components/LoadingScreen";
+import SmartChatWidget from "@/components/SmartChatWidget";
 import { useState } from "react";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => {
                   </Routes>
                 </PageTransition>
               )}
+              <SmartChatWidget />
             </BrowserRouter>
           </TooltipProvider>
         </LanguageProvider>
