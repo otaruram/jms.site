@@ -46,14 +46,6 @@ const Header = () => {
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </Button>
-
-          {/* CTA */}
-          <Button variant="heroOutline" size="sm" asChild className="hidden md:inline-flex">
-            <a href="https://wa.link/2j2jxt" target="_blank" rel="noopener noreferrer">
-              <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">{t('hero.cta.whatsapp')}</span>
-            </a>
-          </Button>
         </div>
       </div>
     </header>

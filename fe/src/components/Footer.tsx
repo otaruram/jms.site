@@ -34,8 +34,8 @@ const Footer = () => {
             <ul className="space-y-4">
               {['Beranda', 'Tentang Kami', 'Keunggulan', 'Katalog Bahan', 'Aksesoris', 'Portofolio'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="flex items-center gap-2 text-sm text-zinc-400 hover:text-green-500 transition-colors group">
-                    <ChevronRight className="w-4 h-4 text-zinc-700 group-hover:text-green-500 transition-colors" />
+                  <a href="#" className="flex items-center gap-3 text-[15px] text-zinc-300 hover:text-green-500 transition-colors group py-0.5">
+                    <ChevronRight className="w-3.5 h-3.5 text-zinc-600 group-hover:text-green-500 transition-colors" />
                     {item}
                   </a>
                 </li>
