@@ -1,46 +1,49 @@
 import React from 'react';
 import { Camera } from 'lucide-react';
 
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const galleryPhotos = [
     {
         id: 1,
         url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
-        caption: "Instalasi Rel Lengkung di Ruang ICU",
+        captionKey: "gal.1",
         gridClass: "md:col-span-2 md:row-span-2",
     },
     {
         id: 2,
         url: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop",
-        caption: "Pemasangan Gorden Anti-Bakteri Bangsal Anak",
+        captionKey: "gal.2",
         gridClass: "md:col-span-1 md:row-span-1",
     },
     {
         id: 3,
         url: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=800&auto=format&fit=crop",
-        caption: "Pengepasan Gorden Jaring Ruang VIP",
+        captionKey: "gal.3",
         gridClass: "md:col-span-1 md:row-span-1",
     },
     {
         id: 4,
         url: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=800&auto=format&fit=crop",
-        caption: "Proses Drilling & Anchoring Rel",
+        captionKey: "gal.4",
         gridClass: "md:col-span-2 md:row-span-1",
     }
 ];
 
 export default function InstallationGallery() {
+    const { t } = useLanguage();
+
     return (
         <section className="py-24 bg-white dark:bg-black">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
                     <div className="max-w-2xl">
-                        <span className="text-sm font-bold tracking-wider text-green-600 uppercase mb-3 block">Bukti Pemasangan</span>
+                        <span className="text-sm font-bold tracking-wider text-green-600 uppercase mb-3 block">{t('gal.badge')}</span>
                         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-                            Pengalaman <span className="text-green-600">Instalasi Nyata</span>
+                            {t('gal.title.1')} <span className="text-green-600">{t('gal.title.2')}</span>
                         </h2>
                         <p className="text-lg text-muted-foreground">
-                            JMS tidak hanya menyuplai material, tetapi juga memiliki tim teknisi spesialis gorden medis
-                            yang memastikan keamanan konstruksi penyangga atap rumah sakit.
+                            {t('gal.desc')}
                         </p>
                     </div>
 
@@ -51,7 +54,7 @@ export default function InstallationGallery() {
                         className="inline-flex shrink-0 items-center justify-center rounded-lg border-2 border-green-600 bg-transparent px-6 py-3 text-sm font-semibold text-green-600 transition-all hover:bg-green-50 focus:ring-4 focus:ring-green-100 dark:text-green-400 dark:border-green-500"
                     >
                         <Camera className="mr-2 h-4 w-4" />
-                        Lihat Portofolio Lengkap
+                        {t('gal.cta')}
                     </a>
                 </div>
 
@@ -69,14 +72,14 @@ export default function InstallationGallery() {
                                     <div className="group relative w-full h-full overflow-hidden rounded-2xl bg-muted">
                                         <img
                                             src={photo.url}
-                                            alt={photo.caption}
+                                            alt={t(photo.captionKey)}
                                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             loading="lazy"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                         <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                             <p className="font-medium text-white text-sm md:text-base line-clamp-2">
-                                                {photo.caption}
+                                                {t(photo.captionKey)}
                                             </p>
                                         </div>
                                     </div>
@@ -90,14 +93,14 @@ export default function InstallationGallery() {
                                     <div className="group relative w-full h-full overflow-hidden rounded-2xl bg-muted">
                                         <img
                                             src={photo.url}
-                                            alt={photo.caption}
+                                            alt={t(photo.captionKey)}
                                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             loading="lazy"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                         <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                             <p className="font-medium text-white text-sm md:text-base line-clamp-2">
-                                                {photo.caption}
+                                                {t(photo.captionKey)}
                                             </p>
                                         </div>
                                     </div>

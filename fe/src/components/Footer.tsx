@@ -1,7 +1,10 @@
 import { MapPin, Mail, Phone, Instagram, Building2, Clock, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer id="kontak" className="bg-zinc-950 text-zinc-300 py-16 md:py-24 border-t border-zinc-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +22,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
-              Pusat pengadaan gorden rumah sakit dan komponen rel medis bersertifikat TKDN. Solusi interior klinis terpercaya untuk fasilitas kesehatan di seluruh Indonesia.
+              {t('foot.desc')}
             </p>
             <div className="flex gap-4 pt-2">
               <a href="https://instagram.com/jayatamedikaofficial" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors">
@@ -30,13 +33,20 @@ const Footer = () => {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="font-semibold text-white text-lg mb-6">Navigasi</h4>
+            <h4 className="font-semibold text-white text-lg mb-6">{t('foot.nav')}</h4>
             <ul className="space-y-4">
-              {['Beranda', 'Tentang Kami', 'Keunggulan', 'Katalog Bahan', 'Aksesoris', 'Portofolio'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="flex items-center gap-3 text-[15px] text-zinc-300 hover:text-green-500 transition-colors group py-0.5">
+              {[
+                { label: t('nav.home'), href: '#' },
+                { label: t('nav.about'), href: '#about' },
+                { label: t('nav.features'), href: '#features' },
+                { label: t('nav.catalog'), href: '#materials' },
+                { label: t('nav.accessories'), href: '#accessories' },
+                { label: t('nav.portfolio'), href: '#portfolio' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="flex items-center gap-3 text-[15px] text-zinc-300 hover:text-green-500 transition-colors group py-0.5">
                     <ChevronRight className="w-3.5 h-3.5 text-zinc-600 group-hover:text-green-500 transition-colors" />
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -45,7 +55,7 @@ const Footer = () => {
 
           {/* Column 3: Contact Info */}
           <div className="space-y-6">
-            <h4 className="font-semibold text-white text-lg mb-6">Hubungi Kami</h4>
+            <h4 className="font-semibold text-white text-lg mb-6">{t('foot.contact')}</h4>
             <div className="flex items-start gap-4 text-sm text-zinc-400">
               <MapPin className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
               <p className="leading-relaxed">
@@ -73,21 +83,21 @@ const Footer = () => {
 
           {/* Column 4: Operational Hours & CTA */}
           <div>
-            <h4 className="font-semibold text-white text-lg mb-6">Jam Operasional</h4>
+            <h4 className="font-semibold text-white text-lg mb-6">{t('foot.hours')}</h4>
             <div className="flex items-start gap-4 text-sm text-zinc-400 mb-8">
               <Clock className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
               <ul className="space-y-2">
                 <li className="flex justify-between w-full min-w-[150px]">
-                  <span>Senin - Jumat:</span>
+                  <span>{t('foot.hours.weekday')}</span>
                   <span className="text-white">08.00 - 17.00</span>
                 </li>
                 <li className="flex justify-between w-full min-w-[150px]">
-                  <span>Sabtu:</span>
+                  <span>{t('foot.hours.saturday')}</span>
                   <span className="text-white">08.00 - 14.00</span>
                 </li>
                 <li className="flex justify-between w-full min-w-[150px] text-zinc-500">
-                  <span>Minggu:</span>
-                  <span>Tutup</span>
+                  <span>{t('foot.hours.sunday')}</span>
+                  <span>{t('foot.hours.closed')}</span>
                 </li>
               </ul>
             </div>
@@ -99,7 +109,7 @@ const Footer = () => {
               className="inline-flex w-full items-center justify-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-green-500 hover:shadow-lg hover:shadow-green-500/20 focus:outline-none focus:ring-4 focus:ring-green-500/30"
             >
               <Phone className="w-4 h-4 mr-2" />
-              Minta Penawaran Harga
+              {t('foot.cta')}
             </a>
           </div>
 
@@ -108,11 +118,11 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-zinc-900/80 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-zinc-500">
-            © {new Date().getFullYear()} PT Jayata Medika Sentosa. Dilindungi Hak Cipta.
+            {t('foot.copyright')}
           </p>
           <div className="flex items-center gap-6">
             <span className="text-sm font-semibold text-green-500 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
-              TKDN 94,37% Tersertifikasi
+              {t('tkdn.cert')}
             </span>
           </div>
         </div>

@@ -38,20 +38,22 @@ const materialsData: Record<string, Material> = {
     }
 };
 
+import { useLanguage } from '@/contexts/LanguageContext';
+
 export default function MaterialsSection() {
+    const { t } = useLanguage();
     const [activeTab, setActiveTab] = useState<string>('jaring');
 
     return (
         <section id="materials" className="py-20 bg-white dark:bg-black">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center mb-12">
-                    <span className="text-sm font-bold tracking-wider text-green-600 uppercase mb-3 block">Katalog Lengkap</span>
+                    <span className="text-sm font-bold tracking-wider text-green-600 uppercase mb-3 block">{t('mat.badge')}</span>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-                        Spesifikasi & Pilihan <span className="text-green-600">Bahan</span>
+                        {t('mat.title')}
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Sistem klasifikasi 3-kategori (Jaring, Polyester, dan PVC) kami memungkinkan rumah sakit
-                        memilih tirai paling higienis sesuai tingkat risiko bangsal.
+                        {t('mat.desc')}
                     </p>
                 </div>
 
@@ -66,7 +68,7 @@ export default function MaterialsSection() {
                                 : 'bg-green-50 text-green-700 hover:bg-green-100 dark:bg-green-950/30 dark:text-green-400'
                                 }`}
                         >
-                            {data.name}
+                            {t(`mat.tab.${key}`)}
                         </button>
                     ))}
                 </div>
@@ -78,13 +80,13 @@ export default function MaterialsSection() {
                         {/* Specs Table */}
                         <div>
                             <h3 className="text-2xl font-bold mb-6 text-foreground border-b border-border pb-4">
-                                Spesifikasi Teknis
+                                {t('mat.spec.title')}
                             </h3>
                             <ul className="space-y-4">
                                 {materialsData[activeTab].specs.map((spec, i) => (
                                     <li key={i} className="flex items-center gap-3 text-muted-foreground">
                                         <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-                                        <span>{spec}</span>
+                                        <span>{t(spec)}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -93,7 +95,7 @@ export default function MaterialsSection() {
                         {/* Colors Grid */}
                         <div>
                             <h3 className="text-2xl font-bold mb-6 text-foreground border-b border-border pb-4">
-                                Pilihan Warna
+                                {t('mat.colors.title')}
                             </h3>
                             <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
                                 {materialsData[activeTab].swatches.map((swatch, idx) => (
@@ -102,7 +104,7 @@ export default function MaterialsSection() {
                                             className="w-14 h-14 rounded-full border-4 border-white dark:border-gray-800 shadow-md transform transition-transform group-hover:scale-110"
                                             style={{ backgroundColor: swatch.hex }}
                                         />
-                                        <span className="text-xs font-medium text-center text-muted-foreground">{swatch.name}</span>
+                                        <span className="text-xs font-medium text-center text-muted-foreground">{t(swatch.name)}</span>
                                     </div>
                                 ))}
                             </div>
@@ -119,7 +121,7 @@ export default function MaterialsSection() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-lg border-2 border-green-600 bg-transparent px-8 py-3.5 text-base font-semibold text-green-600 transition-all hover:bg-green-50 disabled:opacity-50 disabled:pointer-events-none focus:ring-4 focus:ring-green-100 dark:text-green-400 dark:border-green-500"
                     >
-                        Minta Katalog PDF Lengkap Via WA
+                        {t('mat.cta')}
                     </a>
                 </div>
 

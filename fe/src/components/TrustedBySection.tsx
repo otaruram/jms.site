@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hospital, Activity, HeartPulse, Stethoscope, Microscope, Syringe, Ambulance, Cross } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const clients = [
     { name: "RSUD Welas Asih", icon: Hospital },
@@ -14,11 +15,13 @@ const clients = [
 ];
 
 export default function TrustedBySection() {
+    const { t } = useLanguage();
+
     return (
         <section className="py-12 border-y border-border bg-white dark:bg-black overflow-hidden hide-scrollbar">
             <div className="container mx-auto px-4 mb-8">
                 <p className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-widest">
-                    Dipercaya oleh puluhan fasilitas kesehatan B2B di Indonesia
+                    {t('trusted.title')}
                 </p>
             </div>
 

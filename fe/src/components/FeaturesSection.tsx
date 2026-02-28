@@ -1,51 +1,53 @@
 import React from 'react';
 import { ShieldCheck, Droplets, Flame, Cpu, Leaf, Stethoscope } from 'lucide-react';
 
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const features = [
     {
         icon: ShieldCheck,
-        title: 'Anti Bakteri Tersertifikasi',
-        description: 'Material diuji secara klinis dan tersertifikasi mencegah perkembangbiakan patogen udara.',
+        titleKey: 'feat.1.title',
+        descKey: 'feat.1.desc',
     },
     {
         icon: Droplets,
-        title: 'Water Repellent (Tahan Cairan)',
-        description: 'Tidak tembus darah dan cairan kimia tajam, sangat mudah dilap dalam kondisi darurat.',
+        titleKey: 'feat.2.title',
+        descKey: 'feat.2.desc',
     },
     {
         icon: Flame,
-        title: 'Fire Retardant (Anti Api)',
-        description: 'Tidak mudah terbakar dan akan cepat memadamkan api dengan sendirinya (self-extinguishing).',
+        titleKey: 'feat.3.title',
+        descKey: 'feat.3.desc',
     },
     {
         icon: Cpu,
-        title: 'Konstruksi Jaring Khusus',
-        description: 'Bagian atas gorden dilengkapi jaring 50cm agar sirkulasi udara dan AC tetap menyebar rata ke pasien.',
+        titleKey: 'feat.4.title',
+        descKey: 'feat.4.desc',
     },
     {
         icon: Leaf,
-        title: 'Aman untuk Pasien & Lingkungan',
-        description: 'Bebas dari zar kimia beracun dan material non-alergenik, cocok untuk bangsal anak sekalipun.',
+        titleKey: 'feat.5.title',
+        descKey: 'feat.5.desc',
     },
     {
         icon: Stethoscope,
-        title: 'Standar Akreditasi KARS / JCI',
-        description: 'Mengikuti pedoman persilangan infeksi untuk membantu kelulusan akreditasi rumah sakit.',
+        titleKey: 'feat.6.title',
+        descKey: 'feat.6.desc',
     },
 ];
 
 export default function FeaturesSection() {
+    const { t } = useLanguage();
     return (
         <section id="features" className="py-20 bg-green-50/50 dark:bg-green-950/10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
-                    <span className="text-sm font-bold tracking-wider text-green-600 uppercase mb-3 block">Standar Mutu Tertinggi</span>
+                    <span className="text-sm font-bold tracking-wider text-green-600 uppercase mb-3 block">{t('features.badge')}</span>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-                        Keunggulan Teknis <span className="text-green-600">Gorden JMS</span>
+                        {t('features.title').split(' JMS')[0]} <span className="text-green-600">JMS</span>
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Bukan sekadar penutup ruangan. Kami mendesain kain gorden kami dengan enam lapis keunggulan mutlak
-                        untuk standar keselamatan medis B2B.
+                        {t('features.desc')}
                     </p>
                 </div>
 
@@ -64,8 +66,8 @@ export default function FeaturesSection() {
                                     <Icon className="w-7 h-7 text-green-600" />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-foreground mb-3 relative z-10">{feature.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed relative z-10">{feature.description}</p>
+                                <h3 className="text-xl font-bold text-foreground mb-3 relative z-10">{t(feature.titleKey)}</h3>
+                                <p className="text-muted-foreground leading-relaxed relative z-10">{t(feature.descKey)}</p>
                             </div>
                         );
                     })}
